@@ -23,6 +23,9 @@
 
 ![alt-текст](https://github.com/freebip/boxpop/raw/master/images/001.png)
 
+### Видео
+
+[Gameplay](https://www.youtube.com/watch?v=0bt8f1ioZUc)
 
 ### Время прохождения игры
 
