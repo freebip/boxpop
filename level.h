@@ -1,16 +1,16 @@
 #ifndef __LEVEL_H__
 #define __LEVEL_H__
 
-// цвет поля
+// С†РІРµС‚ РїРѕР»СЏ
 #define FIELD_COLOR COLOR_YELLOW
-// цвет фигуры
+// С†РІРµС‚ С„РёРіСѓСЂС‹
 #define CELL_COLOR COLOR_BLUE
-// цвет элемента фигуры куда возможен ход
+// С†РІРµС‚ СЌР»РµРјРµРЅС‚Р° С„РёРіСѓСЂС‹ РєСѓРґР° РІРѕР·РјРѕР¶РµРЅ С…РѕРґ
 #define NEXT_CELL_COLOR COLOR_RED
-// цвет 2 элемента фигуры куда возможен ход
+// С†РІРµС‚ 2 СЌР»РµРјРµРЅС‚Р° С„РёРіСѓСЂС‹ РєСѓРґР° РІРѕР·РјРѕР¶РµРЅ С…РѕРґ
 #define NEXT_CELL_SECOND_COLOR COLOR_PURPLE
 
-// цвет текущего элемента фигуры
+// С†РІРµС‚ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° С„РёРіСѓСЂС‹
 #define CURRENT_CELL_COLOR COLOR_WHITE
 
 struct size_

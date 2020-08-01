@@ -2,9 +2,9 @@
 #include "level.h"
 #include "common.h"
 
-// расстояние между элементами фигуры
+// СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ СЌР»РµРјРµРЅС‚Р°РјРё С„РёРіСѓСЂС‹
 #define CELL_SPACING 1
-// минимальное расстояние от фигуры до границ экрана
+// РјРёРЅРёРјР°Р»СЊРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ С„РёРіСѓСЂС‹ РґРѕ РіСЂР°РЅРёС† СЌРєСЂР°РЅР°
 #define BORDER_DISTANCE 10
 
 #define LEVEL_COUNT (sizeof(levels)/sizeof(struct level_t))
@@ -165,7 +165,7 @@ void init_current_level()
     int flat_size = s_level.width * s_level.height;
     _memcpy(game_appdata->game_state.data, &levels_data[data_offset], flat_size);
     
-    // случайно выбираем первоначальную позицию из доступных
+    // СЃР»СѓС‡Р°Р№РЅРѕ РІС‹Р±РёСЂР°РµРј РїРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅСѓСЋ РїРѕР·РёС†РёСЋ РёР· РґРѕСЃС‚СѓРїРЅС‹С…
     int n = 0;
     for (int i = 0; i < flat_size; i++)
         if (game_appdata->game_state.data[i] == 2)
@@ -196,11 +196,11 @@ struct point_ get_cell_position(int level, int x_cell, int y_cell)
 {
     struct size_ s_level = levels[level].size;
 
-    // размер элемента фигуры
+    // СЂР°Р·РјРµСЂ СЌР»РµРјРµРЅС‚Р° С„РёРіСѓСЂС‹
     int size_x = (VIDEO_X - 2 * BORDER_DISTANCE - (s_level.width - 1) * CELL_SPACING) / s_level.width;
     int size_y = (VIDEO_Y - 2 * BORDER_DISTANCE - (s_level.height - 1) * CELL_SPACING) / s_level.height;
     int size = min(size_x, size_y);
-    // начальное положение фигуры на экране
+    // РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С„РёРіСѓСЂС‹ РЅР° СЌРєСЂР°РЅРµ
     int start_x = (VIDEO_X - size * s_level.width - (s_level.width - 1) * CELL_SPACING) / 2;
     int start_y = (VIDEO_Y - size * s_level.height - (s_level.height - 1) * CELL_SPACING) / 2;
     
@@ -218,11 +218,11 @@ void draw_level()
 
     struct size_ s_level = levels[game_appdata->n_current_level].size;
 
-    // размер элемента фигуры
+    // СЂР°Р·РјРµСЂ СЌР»РµРјРµРЅС‚Р° С„РёРіСѓСЂС‹
     int size_x = (VIDEO_X - 2 * BORDER_DISTANCE - (s_level.width - 1) * CELL_SPACING) / s_level.width;
     int size_y = (VIDEO_Y - 2 * BORDER_DISTANCE - (s_level.height - 1) * CELL_SPACING) / s_level.height;
     int size = min(size_x, size_y);
-    // начальное положение фигуры на экране
+    // РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С„РёРіСѓСЂС‹ РЅР° СЌРєСЂР°РЅРµ
     int start_x = (VIDEO_X - size * s_level.width - (s_level.width - 1) * CELL_SPACING) / 2;
     int start_y = (VIDEO_Y - size * s_level.height - (s_level.height - 1) * CELL_SPACING) / 2;
     
